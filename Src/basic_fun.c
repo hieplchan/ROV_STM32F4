@@ -20,9 +20,9 @@ void Delay(uint32_t nCount)
 void GPIO_Configuration(void)
 {
 	GPIO_InitTypeDef  GPIO_InitStructure;
-	
+
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
-  
+
   /* Configure PB0 PB1 in output pushpull mode */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
@@ -39,8 +39,8 @@ void GPIO_Configuration(void)
   */
 void LED_Test(void)
 {
-		GPIO_SetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8);
-		Delay(1000000);
-		GPIO_ResetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8);
-		Delay(1000000);
+  GPIO_SetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8);
+	Delay(1000000);
+	GPIO_ResetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8);
+	Delay(1000000);
 }
