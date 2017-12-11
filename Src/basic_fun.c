@@ -40,7 +40,7 @@ void GPIO_Configuration(void)
 void LED_Test(void)
 {
   GPIO_SetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8);
-	Delay(1000000);
-	GPIO_ResetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8);
-	Delay(1000000);
+  Delay(1000000);
+  GPIO_ResetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7|GPIO_Pin_8);
+  Delay(1000000);
 }
