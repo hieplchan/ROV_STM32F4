@@ -1,0 +1,5 @@
+****************Connect ST-Link to Simple Kit****************
+GND 	--	GND
+SWCLK 	--	TCK
+SWDIO 	--	TMS
+VCC 	-- 	VCC
