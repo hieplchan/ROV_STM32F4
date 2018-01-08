@@ -6,4 +6,4 @@ GND -- GND
 3.3 -- 3.3
 
 ****************Code STM32F4****************
-Floating Point Hardware: Not used
+Floating Point Hardware: Not used: Must be config
