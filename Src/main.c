@@ -34,20 +34,20 @@ int main(void)
 
   while (1)
   {
-		//MPU6050_GetRawAccelTempGyro(MPU6050data);
-		//test = test2;
-		LED_PWM_Control(pulse);
-		
+		MPU6050_GetRawAccelTempGyro(MPU6050data);
 
-		
-		/*		
 		acc[0] = (float)(MPU6050data[0])/(float)(16384.0);
 		acc[1] = (float)(MPU6050data[1])/(float)(16384.0);
-		acc[2] = (float)(MPU6050data[2])/(float)(16384.0);
+		acc[2] = (float)(MPU6050data[2])/(float)(16384.0);		
+
 		temperature = (float)((float)MPU6050data[3]/(float)340.0 + (float)36.53);
 		gyro[0] = (float)(MPU6050data[4])/(float)(16.4);
 		gyro[1] = (float)(MPU6050data[5])/(float)(16.4);
 		gyro[2] = (float)(MPU6050data[6])/(float)(16.4);
-		imu(acc, gyro, 0.1f, angle);*/
+		
+		LED_PWM_Control(pulse);		
+
+		
+//		imu(acc, gyro, 0.1f, angle);
   }
 }

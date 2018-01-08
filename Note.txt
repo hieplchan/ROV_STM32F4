@@ -1,5 +1,9 @@
 ****************Connect ST-Link to Simple Kit****************
-GND 	--	GND
-SWCLK 	--	TCK
-SWDIO 	--	TMS
-VCC 	-- 	VCC
+NRST -- RST
+SWCLK -- TCK
+SWDIO -- TMS
+GND -- GND
+3.3 -- 3.3
+
+****************Code STM32F4****************
+Floating Point Hardware: Not used
