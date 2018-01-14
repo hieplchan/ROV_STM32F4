@@ -16,6 +16,8 @@ void Delay(uint32_t nCount);
 
 /*-----User variables-----*/
 int pulse[] = {100, 100, 100};
+int16_t pulse_esc[] = {19999, 19999, 19999};
+
 extern uint16_t ADCValue;
 
 int16_t MPU6050data[7];
@@ -31,30 +33,30 @@ int16_t test2 = 1234;
 /*------Main funtion------*/
 int main(void)
 {
-	SystemInit();
-	LED_PWM_Configuration();
+	//SystemInit();
 	ADC_Config();
+	ESC_PWM_Configuration();
 	
-	LED_PWM_Control(pulse);	
+	
+//  LED_PWM_Configuration();
 
-	MPU6050_I2C_Configuration();
-	MPU6050_Initialize();
+//  MPU6050_I2C_Configuration();
+//  MPU6050_Initialize();
 //	HMC5883L_Initialize();
 
 
   while (1)
   {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		ESC_PWM_Control(pulse_esc);
+		pulse_esc[0] = 5000;
+		pulse_esc[1] = 5000;
+		pulse_esc[2] = 5000;
+
+		//TIM3->CCR1 = ADCValue*4 + 1000;
+    //TIM3->CCR2 = ADCValue*4 + 1000;
+		//TIM3->CCR3 = ADCValue*4 + 1000;
+		//TIM3->CCR4 = ADCValue*4 + 1000;
+
 //		MPU6050_GetRawAccelTempGyro(MPU6050data);
 //		//HMC5883L_GetHeading(HMC5883Ldata);
 //		
@@ -67,7 +69,6 @@ int main(void)
 //		gyro[1] = (float)(MPU6050data[5])/(float)(16.4);
 //		gyro[2] = (float)(MPU6050data[6])/(float)(16.4);
 //				
-//		imu(acc, gyro, 0.1f, angle);
-		
+//		imu(acc, gyro, 0.1f, angle);		
   }
 }
