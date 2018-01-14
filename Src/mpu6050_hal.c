@@ -1,6 +1,6 @@
 /* Includes */
 #include "mpu6050_hal.h"
-//#include "stm32f10x_i2c.h"
+#include "stm32f4xx.h"
 
 /** @defgroup MPU6050_Library
 * @{
