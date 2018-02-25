@@ -12,7 +12,7 @@
 void imu(float* acc_in, float* gyro_in, float dt, float* out);
 void Delay(uint32_t nCount);
 
-/*-----Module STM32F4DIS variables-----*/
+/*-----Module STM32F4DIS variables----*/
 
 /*-----User variables-----*/
 int pulse[] = {100, 100, 100};
